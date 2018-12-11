@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.example.m.wielomian.MainActivity">
+
+    <TextView
+        android:id="@+id/textViewA"
+        android:layout_width="20dp"
+        android:layout_height="40dp"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="24dp"
+        android:text="A:"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/textViewB"
+        android:layout_width="20dp"
+        android:layout_height="40dp"
+        android:layout_below="@+id/textViewA"
+        android:layout_alignStart="@+id/textViewA"
+        android:layout_alignLeft="@+id/textViewA"
+        android:layout_marginStart="24dp"
+        android:layout_marginTop="24dp"
+        android:text="B:"
+        app:layout_constraintStart_toEndOf="@+id/textA"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/textViewC"
+        android:layout_width="20dp"
+        android:layout_height="40dp"
+        android:layout_below="@+id/textViewB"
+        android:layout_alignStart="@+id/textViewB"
+        android:layout_alignLeft="@+id/textViewB"
+        android:layout_marginStart="24dp"
+        android:layout_marginTop="24dp"
+        android:text="C:"
+        app:layout_constraintStart_toEndOf="@+id/textB"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <EditText
+        android:id="@+id/textA"
+        android:layout_width="60dp"
+        android:layout_height="40dp"
+        android:layout_alignTop="@+id/textViewA"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="24dp"
+        android:layout_toEndOf="@+id/textViewA"
+        android:layout_toRightOf="@+id/textViewA"
+        android:ems="10"
+        android:inputType="numberSigned"
+        app:layout_constraintStart_toEndOf="@+id/textViewA"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <EditText
+        android:id="@+id/textB"
+        android:layout_width="60dp"
+        android:layout_height="40dp"
+        android:layout_alignStart="@+id/textA"
+        android:layout_alignLeft="@+id/textA"
+        android:layout_alignTop="@+id/textViewB"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="24dp"
+        android:ems="10"
+        android:inputType="numberSigned"
+        app:layout_constraintStart_toEndOf="@+id/textViewB"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <EditText
+        android:id="@+id/textC"
+        android:layout_width="60dp"
+        android:layout_height="40dp"
+        android:layout_alignStart="@+id/textB"
+        android:layout_alignLeft="@+id/textB"
+        android:layout_alignTop="@+id/textViewC"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="24dp"
+        android:layout_marginEnd="48dp"
+        android:ems="10"
+        android:inputType="numberSigned"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.166"
+        app:layout_constraintStart_toEndOf="@+id/textViewC"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/submitButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/textC"
+        android:layout_alignStart="@+id/textViewC"
+        android:layout_alignLeft="@+id/textViewC"
+        android:layout_marginStart="152dp"
+        android:layout_marginTop="52dp"
+        android:layout_marginEnd="144dp"
+        android:text="Submit"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textB" />
+
+</android.support.constraint.ConstraintLayout>
